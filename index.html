@@ -30,7 +30,7 @@
       <section class="img-upload">
         <div class="img-upload__wrapper">
           <h2 class="img-upload__title  visually-hidden">Загрузка фотографии</h2>
-          <form class="img-upload__form" id="upload-select-image" method="post" enctype="multipart/form-data" autocomplete="off">
+          <form class="img-upload__form" id="upload-select-image" autocomplete="off" method="POST" enctype="multipart/form-data" action="https://29.javascript.htmlacademy.pro/kekstagram">
 
             <!-- Изначальное состояние поля для загрузки изображения -->
             <fieldset class="img-upload__start">
@@ -46,7 +46,7 @@
                   <!-- Изменение размера изображения -->
                   <fieldset class="img-upload__scale  scale">
                     <button type="button" class="scale__control  scale__control--smaller">Уменьшить</button>
-                    <input type="text" class="scale__control  scale__control--value" value="55%" title="Image Scale" name="scale" readonly>
+                    <input type="text" class="scale__control  scale__control--value" value="100%" title="Image Scale" name="scale" readonly>
                     <button type="button" class="scale__control  scale__control--bigger">Увеличить</button>
                   </fieldset>
 
@@ -212,7 +212,7 @@
     <section class="error">
       <div class="error__inner">
         <h2 class="error__title">Ошибка загрузки файла</h2>
-        <button type="button" class="error__button">Загрузить другой файл</button>
+        <button type="button" class="error__button">Попробовать ещё раз</button>
       </div>
     </section>
   </template>
@@ -226,11 +226,11 @@
       </div>
     </section>
   </template>
-
-  <!-- Экран загрузки изображения -->
-  <template id="messages">
-    <div class="img-upload__message  img-upload__message--loading">Загружаем...</div>
-  </template>
-
+  <script src="https://cdn.jsdelivr.net/npm/pristinejs@1.0.0/dist/pristine.min.js"></script>
+  <script type="module" src="js/api.js" defer></script>
+  <script type="module" src='js/main.js' defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
 </body>
 </html>
+
